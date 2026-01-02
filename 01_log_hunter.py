@@ -57,5 +57,6 @@ print(f" Linear Search: Found in {steps_linear:,} steps | Time: {end - start:.5f
 start = time.time()
 steps_binary = binary_search(log_ids, target_id)
 end = time.time()
-print(f" Binary Search: Found in {steps_binary:,} steps | Time: {end - start:.5f} sec")
+print(f" Binary Search: Found in {steps_binary:,} steps | Time: {end - start:.5f} sec") #  Binary Search: Found in 22 steps | Time: 0.00003 sec
+
 print(f"\n CONCLUSION: To find ID {target_id}, Binary Search saved {steps_linear - steps_binary:,} operations.")
