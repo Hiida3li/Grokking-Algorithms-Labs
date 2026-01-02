@@ -47,9 +47,15 @@ def binary_search(data, target):
 
 print(f"\n HUNTING FOR TRANSACTION ID: {target_id}")
 
+# Linear
 start = time.time()
 steps_linear = linear_search(log_ids, target_id)
 end = time.time()
-print(f" Linear Search: Found in {steps_linear:,} steps | Time: {end - start:.5f} sec")
+print(f" Linear Search: Found in {steps_linear:,} steps | Time: {end - start:.5f} sec") # Linear Search: Found in 7,892,346 steps | Time: 0.21746 sec
 
-
+# Binary
+start = time.time()
+steps_binary = binary_search(log_ids, target_id)
+end = time.time()
+print(f" Binary Search: Found in {steps_binary:,} steps | Time: {end - start:.5f} sec")
+print(f"\n CONCLUSION: To find ID {target_id}, Binary Search saved {steps_linear - steps_binary:,} operations.")
