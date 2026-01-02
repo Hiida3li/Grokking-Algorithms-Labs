@@ -4,7 +4,7 @@ import time
 # They are sorted (0, 1, 2, ... 9,999,999)
 
 print("Generating 10 million sorted Log IDs... (Simulating Database Index)")
-log_ids = list(range(1000000))
+log_ids = list(range(10000000))
 
 # The scenario says: "My transaction 7892345 failed!"
 # We need to find this specific ID in the pile to check the logs
@@ -18,5 +18,38 @@ def linear_search(data, target):
         if item == target:
             return steps
     return None
+
+# SEARCH (BINARY)
+# Open the middle, see 5,000,000
+# 7,892,345 is bigger -> Jumps to right half
+# Split again -> Finds it instantly
+
+def binary_search(data, target):
+    low = 0
+    high = len(data) - 1
+    steps = 0
+
+    while low <= high:
+        steps += 1
+        mid = (low + high) // 2
+        guess = data[mid]
+
+        if guess == target:
+            return steps
+
+        if guess > target:
+            high = mid - 1
+
+        else:
+            low = mid + 1
+
+    return None
+
+print(f"\n HUNTING FOR TRANSACTION ID: {target_id}")
+
+start = time.time()
+steps_linear = linear_search(log_ids, target_id)
+end = time.time()
+print(f" Linear Search: Found in {steps_linear:,} steps | Time: {end - start:.5f} sec")
 
 
