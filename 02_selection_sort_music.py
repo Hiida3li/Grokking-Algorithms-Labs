@@ -57,3 +57,7 @@ end_time = time.time()
 time_for_timsort = end_time - start_time
 print(f"Python Native Sort (Senior): {time_for_timsort:.6f} seconds")
 
+if time_for_selection > 0 and time_for_timsort > 0:
+    speedup = time_for_selection / time_for_timsort
+    print(f"\nEFFICIENCY GAIN: Native Sort is {speedup:.0f}x Faster")
+
