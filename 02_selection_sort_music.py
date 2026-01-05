@@ -48,16 +48,19 @@ selection_result = selection_sort(selection_sort_copy)
 end_time = time.time()
 time_for_selection= end_time - start_time
 
-print(f"Selection Sort (Junior): {time_for_selection:.4f} seconds")
+print(f"Selection Sort: {time_for_selection:.4f} seconds")
 
 # Result 2: Python Sort
 start_time = time.time()
 timsort_result = python_sort(timsort_copy)
 end_time = time.time()
 time_for_timsort = end_time - start_time
-print(f"Python Native Sort (Senior): {time_for_timsort:.6f} seconds")
+
+print(f"Python Native Sort: {time_for_timsort:.6f} seconds")
 
 if time_for_selection > 0 and time_for_timsort > 0:
     speedup = time_for_selection / time_for_timsort
     print(f"\nEFFICIENCY GAIN: Native Sort is {speedup:.0f}x Faster")
 
+else:
+    print("\nEFFICIENCY GAIN: Infinite (One was instant)")
