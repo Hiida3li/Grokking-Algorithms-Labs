@@ -60,5 +60,12 @@ found_path = search_filesystem(mock_file_system["root"], "/root", target)
 end = time.time()
 
 
+if found_path:
+    print(f"\nTARGET ACQUIRED")
+    print(f"Location: {found_path}")
+    print(f"Time: {end - start:.4f} sec")
+
+else:
+    print(f"\nTARGET NOT FOUND")
 
 
