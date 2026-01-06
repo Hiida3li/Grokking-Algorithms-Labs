@@ -35,3 +35,30 @@ mock_file_system = {
     }
 }
 
+def search_filesystem(current_folder, path_so_far, target_filename):
+    print(f"Scanning: {path_so_far}...")
+
+    # BASE CASE (The Stop Condition)
+    if target_filename in current_folder["files"]:
+        return f"{path_so_far}/{target_filename}" # If yes returns the full path
+
+    # If there are subfolders, dive into them
+    for folder_name, subfolder_data in current_folder["subfolders"].items():
+        new_path = f"{path_so_far}/{folder_name}"
+        result = search_filesystem(subfolder_data, new_path, target_filename)
+        if result:
+            return result
+
+    return None
+
+
+target = "passwords.txt"
+print(f"STARTING CRAWL FOR: {target}")
+
+start = time.time()
+found_path = search_filesystem(mock_file_system["root"], "/root", target)
+end = time.time()
+
+
+
+
