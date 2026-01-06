@@ -1,0 +1,47 @@
+# first approach is to use while loop
+
+def look_for_key(main_box):
+
+    pile = main_box.make_a_pile_to_look_through()
+
+    # keep looping as long as there are boxes left to check
+    while pile is not empty:
+    box = pile.grab_a_box()
+    for item in box:
+        if item.is_a_box():
+            pile.append(item)
+
+        elif item.is_a_key()
+            print("found the key!")
+
+
+# second approach is using recursion
+
+def look_for_key(main_box):
+    for item in box:
+        if item.is_a_box():
+            look_for_key(item)
+        elif item.is_a_key():
+            print("found the key!")
+
+
+
+======================
+
+
+def fact(x):
+    # Trace when function is called
+    print(f"ENTERING FACT({x})")
+    if x == 1:
+        print(f"BASE CASE IS REACHED: returning 1")
+        return 1
+    else:
+        result = x * fact(x-1)
+        print(f"Returning {result} for fact({x})")
+    return result
+
+
+print(fact(4))
+
+
+
