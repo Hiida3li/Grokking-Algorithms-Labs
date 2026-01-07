@@ -50,5 +50,12 @@ end_time = time.time()
 native_time = end_time - start_time
 print(f"Python built-in: {native_time:.4f} seconds")
 
+if sorted_inventory == inventory_native:
+    print("\nIntegrity Check: PASSED")
 
+else:
+    print("\nIntegrity Check: FAILED")
+
+print(f"\nANALYSIS: Our Python Quicksort is fast, but built-in C is optimized.")
+print(f"   (If we used Selection Sort here, it would have taken ~5 hours)")
 
