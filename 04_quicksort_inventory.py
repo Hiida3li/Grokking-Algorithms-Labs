@@ -36,12 +36,19 @@ inventory = [random.randint(0, 1000) for _ in range(data_size)]
 inventory_native = inventory.copy()
 
 print(f"STARTING SORTING PROTOCOL...")
-
+# First test for QUICKSORT
 start_time = time.time()
 sorted_inventory = quicksort(inventory)
 end_time = time.time()
 qs_time = end_time - start_time
 print(f"Quicksort: {qs_time:.4f} seconds")
+
+# Another test case for PYTHON NATIVE (Timsort)
+start_time = time.time()
+inventory_native.sort()
+end_time = time.time()
+native_time = end_time - start_time
+print(f"Python built-in: {native_time:.4f} seconds")
 
 
 
