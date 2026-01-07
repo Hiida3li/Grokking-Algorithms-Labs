@@ -21,7 +21,7 @@ def quicksort(array):
 
         # Divide into less and greater
         less = [i for i in items_without_pivot if i <= pivot]
-        greater = [i for i in items_without_pivot if i >= pivot]
+        greater = [i for i in items_without_pivot if i > pivot]
         return quicksort(less) + [pivot] + quicksort(greater)
 
 
