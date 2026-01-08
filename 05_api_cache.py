@@ -31,6 +31,18 @@ requests = ["facebook.com", "facebook.com", "facebook.com", "google.com", "faceb
 
 print("SERVER STARTING...")
 
+for req in requests:
+    print(f"\nRequesting: {req}")
+    start = time.time()
+
+    response = fetch_page(req)
+    end = time.time()
+    print(f"Time Taken: {end - start:.4f} seconds")
+
+print("\nANALYSIS: Notice the first request took 2s. The rest took 0s")
+
+
+
 
 
 
