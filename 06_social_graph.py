@@ -39,6 +39,8 @@ def search_connection(start_node, target_name):
                 searched.add(person)
 
     return False
+target = "alice"
+print(f"Find a path to '{target}'")
 
 
 
