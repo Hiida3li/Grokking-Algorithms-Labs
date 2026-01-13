@@ -42,6 +42,16 @@ def search_connection(start_node, target_name):
 target = "alice"
 print(f"Find a path to '{target}'")
 
+found = search_connection("you", target)
+
+if found:
+    print("\nSuccess: There is a connection path to Alice!")
+
+else:
+    print("\nFAILURE: No connection found")
+
+
+
 
 
 
