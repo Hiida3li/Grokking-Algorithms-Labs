@@ -7,6 +7,20 @@ def print_names(start_dir):
     search_queue.append(start_dir)
 
     while search_queue:
-        dir = search_queue.popleft()
+        dir = search_queue.popleft() # while the queue is not empty, pop off a folder to look through 
+        # loop through each file and folder in the directory
+        for file in sorted(listdir(dir)): 
+            full_path = join(dir, file)
+            if isfile(full_path):
+                print(file) # If it is a file print out the name
+            else:
+                search_queue.append(full_path) # If it is a folder add it to the queue of folders to search
+
+            
+printnames("pics")
+
+
+
+
         
 
