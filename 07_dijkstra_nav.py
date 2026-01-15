@@ -54,6 +54,8 @@ def find_lowest_cost_node(costs):
             lowest_cost_node = node
     return lowest_cost_node # After checking all nodes, return the cheapest unprocessed node
 
-    
+print("Calculating fastest route...")
+node = find_lowest_cost_node(costs) # Find the cheapest unprocessed node
+
 
         
