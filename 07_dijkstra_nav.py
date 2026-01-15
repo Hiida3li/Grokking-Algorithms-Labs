@@ -55,7 +55,33 @@ def find_lowest_cost_node(costs):
     return lowest_cost_node # After checking all nodes, return the cheapest unprocessed node
 
 print("Calculating fastest route...")
-node = find_lowest_cost_node(costs) # Find the cheapest unprocessed node
+node = find_lowest_cost_node(costs)
+
+
+while node is not None:
+    cost = costs[node]
+    neighbours = graph[node]
+    # Go through all neighbors of this node
+    for n in neighbours.keys():
+        new_cost = cost + neighbours[n]
+        # If it's cheaper to get to this neighbor by going through this node
+        if costs[n] > new_cost:
+            # Update the cost for this neighbor
+            costs[n] = new_cost
+            # This node becomes the new parent for this neighbor
+            parents[n] = node
+    processed.append(node)
+    node = find_lowest_cost_node(costs)
+
+print(f"Fastest Time to Finish: {costs['fin']} minutes")
+path = ["fin"]
+current = "fin"
+
+while current != "start":
+    current = parents[current]
+    path.append(current)
+
+print(f" Optimal Path: {' -> '.join(path[::-1]).upper()}")
 
 
         
