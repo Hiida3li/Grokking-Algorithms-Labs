@@ -10,6 +10,8 @@ The Graph: The map of roads and traffic times.
 Costs: A table tracking "What is the fastest way to get to Node X so far?"
 Parents: A trail of breadcrumbs so we can reconstruct the path at the end.
 """
+
+# Graph
 graph = {}
 graph["start"] = {}
 graph["start"]["a"] = 6 # Start to A takes 6 minutes
@@ -25,6 +27,19 @@ graph["b"]["fin"] = 5 # B to Finish takes 5 minutes
 graph["fin"] = {} # Finish line has no neighbors
 
 
+# Costs table: How long does it take to get here from Start?
+infinity = float("inf")
+costs = {}
+costs["a"] = 6
+costs["b"] = 2
+costs["fin"] = infinity
 
+# Parents table: How did we get here? (To retrace our steps)
+parents = {}
+parents["a"] = "start"
+parents["b"] = "start"
+parents["fin"] = None
 
+# Processed list: Keep track of nodes we've already calculated
+processed = []
 
