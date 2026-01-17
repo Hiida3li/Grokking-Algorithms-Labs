@@ -15,7 +15,7 @@ It is a **translation layer**. I am taking the core concepts from *Grokking Algo
 | **04** | Quicksort | **The Divide:** Optimizing large data processing | Completed  |
 | **05** | Hash Maps | **API Caching:** Building a Redis-lite layer | Completed  |
 | **06** | Breadth-First Search | **Social Graph:** Finding shortest connections | Completed  |
-| **07** | Dijkstra’s Algorithm | **GPS Navigation:** Finding the fastest route |  Pending   |
-| **08** | Greedy Algorithms | **Schedule Optimizer:** Managing limited resources |  Locked  |
-| **09** | Dynamic Programming | **The Knapsack:** Maximizing inventory value |  Locked  |
+| **07** | Dijkstra’s Algorithm | **GPS Navigation:** Finding the fastest route | Completed  |
+| **08** | Greedy Algorithms | **Schedule Optimizer:** Managing limited resources | Completed  |
+| **09** | Dynamic Programming | **The Knapsack:** Maximizing inventory value |  Pending   |
 | **10** | K-Nearest Neighbors | **Recommendation Engine:** "You might also like..." |  Locked  |
