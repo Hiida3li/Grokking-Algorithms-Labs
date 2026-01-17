@@ -34,3 +34,6 @@ while states_needed:
         states_needed -= states_covered
         print(f"   Picked '{best_station}' (Covers {len(states_covered)} new states)")
         print(f"   Remaining states needed: {len(states_needed)}")
+
+    else:
+        break
