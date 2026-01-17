@@ -37,3 +37,8 @@ while states_needed:
 
     else:
         break
+
+print("\nOPTIMAL STRATEGY CALCULATED")
+print(f"Buy these {len(final_stations)} stations: {final_stations}")
+
+
