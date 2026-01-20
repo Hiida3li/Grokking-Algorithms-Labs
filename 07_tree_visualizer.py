@@ -36,4 +36,12 @@ def print_tree(node, prefix="", is_last=True):
         # Print the current node
         print(f"{prefix}{connector}{name}")
 
+        # If content is a Dictionary, it is a FOLDER. Recurse into it
+        if isinstance(content, dict):
+            new_prefix = prefix + ("    " if is_last_item else "│   ")
+            print_tree(content, new_prefix, is_last_item)
+
+print("VISUALIZING PROJECT STRUCTURE:\n")
+
+
 
