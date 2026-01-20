@@ -46,4 +46,5 @@ print("VISUALIZING PROJECT STRUCTURE:\n")
 
 root_name = list(project_tree.keys())[0]
 print(root_name)
+print_tree(project_tree[root_name])
 
