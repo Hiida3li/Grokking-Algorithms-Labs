@@ -21,3 +21,5 @@ class DiskManager:
             """
             if len(data) > PAGE_SIZE:
                 raise ValueError(f"Data too large! Max {PAGE_SIZE} bytes.")
+            self._seek(page_id)
+            # Pad the data with null bytes if it's smaller than 4KB
