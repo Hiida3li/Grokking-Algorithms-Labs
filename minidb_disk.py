@@ -25,4 +25,4 @@ class DiskManager:
             # Pad the data with null bytes if it's smaller than 4KB
             padded_data = data.ljust(PAGE_SIZE, b'\x00')
             self.file.write(padded_data)
-            self.file.flush()
+            self.file.flush() # Force the OS to write to disk immediately
