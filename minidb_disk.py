@@ -26,3 +26,8 @@ class DiskManager:
             padded_data = data.ljust(PAGE_SIZE, b'\x00')
             self.file.write(padded_data)
             self.file.flush() # Force the OS to write to disk immediately
+
+    def read_page(self, page_id):
+        """
+        Reads a 4KB chunk of data from the disk at location page_id.
+        """
