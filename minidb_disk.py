@@ -14,3 +14,10 @@ class DiskManager:
         """Moves the file cursor to the correct spot for a specific Page ID."""
         offset = page_id * PAGE_SIZE
         self.file.seek(offset)
+
+    def write_page(self, page_id, data):
+            """
+            Saves a 4KB chunk of data to the disk at location page_id.
+            """
+            if len(data) > PAGE_SIZE:
+                raise ValueError(f"Data too large! Max {PAGE_SIZE} bytes.")
