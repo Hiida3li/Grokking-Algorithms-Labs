@@ -61,7 +61,9 @@ if __name__ == "__main__":
     page_0 = db_new.read_page(0)
     page_5 = db_new.read_page(5)
 
+# Show first 20-bytes
     print(f"Read Page 0: {page_0[:20]}")
+    # Show first 50-bytes
     print(f"Read Page 5: {page_5[:50]}")
 
 
