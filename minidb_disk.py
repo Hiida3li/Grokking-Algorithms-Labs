@@ -42,5 +42,10 @@ if __name__ == "__main__":
     print("INITIALIZING DISK MANAGER...")
     db = DiskManager()
 
+# Create some dummy data
+    print(" Writing Page 0 (Metadata)...")
+    header_info = b"Header: Root_ID=5"
+    db.write_page(0, header_info)
+
 
 
