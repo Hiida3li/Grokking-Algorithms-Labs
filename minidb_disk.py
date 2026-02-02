@@ -31,3 +31,7 @@ class DiskManager:
         """
         Reads a 4KB chunk of data from the disk at location page_id.
         """
+        self._seek(page_id)
+        data = self.file.read(PAGE_SIZE)
+        return data
+
