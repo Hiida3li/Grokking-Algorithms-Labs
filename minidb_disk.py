@@ -38,5 +38,9 @@ class DiskManager:
     def close(self):
         self.file.close()
 
+if __name__ == "__main__":
+    print("INITIALIZING DISK MANAGER...")
+    db = DiskManager()
+
 
 
