@@ -51,5 +51,8 @@ if __name__ == "__main__":
     user_data = b"User: Mahmoud | Role: Engineer | Status: Active"
     db.write_page(5, user_data)
 
+    db.close()
+    print("Database Closed.")
+
 
 
