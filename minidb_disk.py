@@ -35,3 +35,8 @@ class DiskManager:
         data = self.file.read(PAGE_SIZE)
         return data
 
+    def close(self):
+        self.file.close()
+
+
+
