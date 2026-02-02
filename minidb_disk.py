@@ -47,5 +47,9 @@ if __name__ == "__main__":
     header_info = b"Header: Root_ID=5"
     db.write_page(0, header_info)
 
+    print("Writing Page 5 (User Data)...")
+    user_data = b"User: Mahmoud | Role: Engineer | Status: Active"
+    db.write_page(5, user_data)
+
 
 
