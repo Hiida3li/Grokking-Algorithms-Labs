@@ -71,3 +71,5 @@ if __name__ == "__main__":
 # Clean up (delete the file so we can run it again later)
     db_new.close()
 
+    # Uncomment to delete after test
+    # os.remove("my_database.db")
