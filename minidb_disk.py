@@ -54,6 +54,7 @@ if __name__ == "__main__":
     db.close()
     print("Database Closed.")
 
+    # Re-open to prove persistence
     print("\n Re-opening Database...")
     db_new = DiskManager()
 
