@@ -58,5 +58,8 @@ if __name__ == "__main__":
     print("\n Re-opening Database...")
     db_new = DiskManager()
 
+    page_0 = db_new.read_page(0)
+    page_5 = db_new.read_page(5)
+
 
 
