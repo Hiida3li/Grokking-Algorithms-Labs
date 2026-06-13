@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def max_area(self, heights: List[int]) -> int:
         left = 0
