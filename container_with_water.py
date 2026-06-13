@@ -11,3 +11,15 @@ class Solution:
 
             max_area = max(max_area, area)
 
+            if heights[left] < heights[right]:
+                left += 1
+            else:
+                right -= 1
+
+        return max_area
+
+
+heights = [3, 4, 1, 2, 2, 4, 1, 3, 2]
+
+solution = Solution()
+print(solution.max_area(heights))
